@@ -42,7 +42,23 @@ let orders = [
 ];
 
 // Start coding here
-let isArray;
-let creditCardTypeOfBlindermann;
-let productQuantityOfJoannet;
-let totalPurchaseOfDary;
+let isArray = (Array.isArray(orders));
+console.log(isArray)
+let creditCardTypeOfBlindermann = orders[2].creditCardType;
+console.log(creditCardTypeOfBlindermann)
+orders[2].creditCardType ="visa";
+console.log(orders[2].creditCardType)
+let productQuantityOfJoannet = orders[3].productQuantity;
+console.log(productQuantityOfJoannet)
+let totalPurchaseOfDary = orders[1].productPrice*orders[1].productQuantity;
+console.log(totalPurchaseOfDary)
+orders.shift();
+console.log(orders)
+// กำหนดให้ Variable isArray มีค่าเท่ากับ ผลลัพธ์ที่ได้จากการตรวจสอบว่า Array orders เป็น Array จริงๆ หรือไม่
+// กำหนดให้ Variable creditCardTypeOfBlindermann มีค่าเท่ากับ Value ที่มาจาก Key creditCardType ของลูกค้าชื่อ Toinette Blindermann
+// ให้ Reassign ค่าของ Key creditCardType ของลูกค้าชื่อ Toinette Blindermann ให้เป็น “visa"
+// กำหนดให้ Variable productQuantityOfJoannet มีค่าเป็น Value ที่มาจาก Key productQuantity ของลูกค้าชื่อ Anjela Joannet
+// กำหนดให้ Variable totalPurchaseOfDary มีค่าเป็น Value เกิดจากการคำนวนยอดซื้อสินค้ารวมของลูกค้าชื่อ Celia Dary
+// 🕵🏼‍♀️  Hint: ยอดซื้อสินค้ารวมหมายถึง ราคาสินค้า x จำนวนสินค้า
+// ให้ลบ Object ของลูกค้าชื่อ Brenn Hugk ที่อยู่ใน Array orders
+// เมื่อลบ Object เสร็จแล้วให้ทำการแสดงผลค่าของ orders ออกมาดูทางหน้าจอ
